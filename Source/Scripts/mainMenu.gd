@@ -4,7 +4,7 @@ extends Node2D
 export var mainWorld : PackedScene
 
 func _ready():
-		$Userlabel.text = GlobalScript.User_text 
+		$Login.text = GlobalScript.User_text 
 
 func _on_PlayGameButton_pressed():
 	get_tree().change_scene("res://Scenes/TileMap.tscn")

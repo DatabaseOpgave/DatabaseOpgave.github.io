@@ -6,7 +6,7 @@ var player_damage = 25
 var Max_health = 100
 var Level = 0
 var Stage = 1
-var User_text = "________"
+var User_text = "Login"
 
 
 

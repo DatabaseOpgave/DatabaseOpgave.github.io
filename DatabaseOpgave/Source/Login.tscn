@@ -1,0 +1,286 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Login.gd" type="Script" id=1]
+[ext_resource path="res://Grafik/Da Tawa kunst Version 1/Tiles/Level1FloorTile.png" type="Texture" id=2]
+
+[node name="Login" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Baggrund" type="Node2D" parent="."]
+
+[node name="Login baggrund" type="Sprite" parent="Baggrund"]
+position = Vector2( 362, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund2" type="Sprite" parent="Baggrund"]
+position = Vector2( 362, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund3" type="Sprite" parent="Baggrund"]
+position = Vector2( 362, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund4" type="Sprite" parent="Baggrund"]
+position = Vector2( 362, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund5" type="Sprite" parent="Baggrund"]
+position = Vector2( 362, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund6" type="Sprite" parent="Baggrund"]
+position = Vector2( 362, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund7" type="Sprite" parent="Baggrund"]
+position = Vector2( 394, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund8" type="Sprite" parent="Baggrund"]
+position = Vector2( 394, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund9" type="Sprite" parent="Baggrund"]
+position = Vector2( 394, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund10" type="Sprite" parent="Baggrund"]
+position = Vector2( 394, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund11" type="Sprite" parent="Baggrund"]
+position = Vector2( 394, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund12" type="Sprite" parent="Baggrund"]
+position = Vector2( 394, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund13" type="Sprite" parent="Baggrund"]
+position = Vector2( 426, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund14" type="Sprite" parent="Baggrund"]
+position = Vector2( 426, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund15" type="Sprite" parent="Baggrund"]
+position = Vector2( 426, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund16" type="Sprite" parent="Baggrund"]
+position = Vector2( 426, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund17" type="Sprite" parent="Baggrund"]
+position = Vector2( 426, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund18" type="Sprite" parent="Baggrund"]
+position = Vector2( 426, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund19" type="Sprite" parent="Baggrund"]
+position = Vector2( 458, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund20" type="Sprite" parent="Baggrund"]
+position = Vector2( 458, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund21" type="Sprite" parent="Baggrund"]
+position = Vector2( 458, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund22" type="Sprite" parent="Baggrund"]
+position = Vector2( 458, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund23" type="Sprite" parent="Baggrund"]
+position = Vector2( 458, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund24" type="Sprite" parent="Baggrund"]
+position = Vector2( 458, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund25" type="Sprite" parent="Baggrund"]
+position = Vector2( 490, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund26" type="Sprite" parent="Baggrund"]
+position = Vector2( 490, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund27" type="Sprite" parent="Baggrund"]
+position = Vector2( 490, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund28" type="Sprite" parent="Baggrund"]
+position = Vector2( 490, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund29" type="Sprite" parent="Baggrund"]
+position = Vector2( 490, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund30" type="Sprite" parent="Baggrund"]
+position = Vector2( 490, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund31" type="Sprite" parent="Baggrund"]
+position = Vector2( 522, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund32" type="Sprite" parent="Baggrund"]
+position = Vector2( 522, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund33" type="Sprite" parent="Baggrund"]
+position = Vector2( 522, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund34" type="Sprite" parent="Baggrund"]
+position = Vector2( 522, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund35" type="Sprite" parent="Baggrund"]
+position = Vector2( 522, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund36" type="Sprite" parent="Baggrund"]
+position = Vector2( 522, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund37" type="Sprite" parent="Baggrund"]
+position = Vector2( 554, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund38" type="Sprite" parent="Baggrund"]
+position = Vector2( 554, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund39" type="Sprite" parent="Baggrund"]
+position = Vector2( 554, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund40" type="Sprite" parent="Baggrund"]
+position = Vector2( 554, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund41" type="Sprite" parent="Baggrund"]
+position = Vector2( 554, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund42" type="Sprite" parent="Baggrund"]
+position = Vector2( 554, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund43" type="Sprite" parent="Baggrund"]
+position = Vector2( 586, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund44" type="Sprite" parent="Baggrund"]
+position = Vector2( 586, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund45" type="Sprite" parent="Baggrund"]
+position = Vector2( 586, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund46" type="Sprite" parent="Baggrund"]
+position = Vector2( 586, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund47" type="Sprite" parent="Baggrund"]
+position = Vector2( 586, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund48" type="Sprite" parent="Baggrund"]
+position = Vector2( 586, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund49" type="Sprite" parent="Baggrund"]
+position = Vector2( 618, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund50" type="Sprite" parent="Baggrund"]
+position = Vector2( 618, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund51" type="Sprite" parent="Baggrund"]
+position = Vector2( 618, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund52" type="Sprite" parent="Baggrund"]
+position = Vector2( 618, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund53" type="Sprite" parent="Baggrund"]
+position = Vector2( 618, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund54" type="Sprite" parent="Baggrund"]
+position = Vector2( 618, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund55" type="Sprite" parent="Baggrund"]
+position = Vector2( 650, 14 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund56" type="Sprite" parent="Baggrund"]
+position = Vector2( 650, 45 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund57" type="Sprite" parent="Baggrund"]
+position = Vector2( 650, 109 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund58" type="Sprite" parent="Baggrund"]
+position = Vector2( 650, 77 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund59" type="Sprite" parent="Baggrund"]
+position = Vector2( 650, 141 )
+texture = ExtResource( 2 )
+
+[node name="Login baggrund60" type="Sprite" parent="Baggrund"]
+position = Vector2( 650, 173 )
+texture = ExtResource( 2 )
+
+[node name="Login create" type="Button" parent="."]
+margin_left = 504.0
+margin_top = 104.0
+margin_right = 597.0
+margin_bottom = 148.0
+text = "Create Login"
+
+[node name="Login" type="Button" parent="."]
+margin_left = 400.0
+margin_top = 104.0
+margin_right = 493.0
+margin_bottom = 148.0
+text = "Login"
+
+[node name="Username" type="TextEdit" parent="."]
+anchor_right = 0.242
+margin_left = 394.0
+margin_top = 14.0
+margin_right = 596.0
+margin_bottom = 54.0
+text = "Username"
+
+[node name="Password" type="TextEdit" parent="."]
+margin_left = 394.0
+margin_top = 60.0
+margin_right = 597.0
+margin_bottom = 100.0
+text = "Password"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 504, 93 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
+
+[connection signal="pressed" from="Login create" to="." method="_on_Login_create_pressed"]
+[connection signal="pressed" from="Login" to="." method="_on_Login_pressed"]

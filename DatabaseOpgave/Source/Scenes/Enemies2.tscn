@@ -1,0 +1,357 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Grafik/Enemy/Kat_Lyserød.png" type="Texture" id=1]
+[ext_resource path="res://Grafik/Enemy/Flagermus_Grøn.png" type="Texture" id=2]
+[ext_resource path="res://Grafik/Enemy/Flagermus_Lilla.png" type="Texture" id=3]
+[ext_resource path="res://Grafik/Enemy/Kat_Orange.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Blå_flagermus.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/gul_kat.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Grøn_flagermus.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Lyserød_kat.gd" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 30.5, 23 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Walk"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 56.5, 39.5 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 32.5, 25.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20.5, 18.875 )
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Walk"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 23, 19 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 32.5, 21.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 20.5, 16.5 )
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Walk"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 29, 19 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 23.5, 19 )
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Walk"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 32.5, 19 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 22.5, 18 )
+
+[node name="Enemies2" type="Node2D"]
+
+[node name="Grøn_flagermus" type="KinematicBody2D" parent="."]
+position = Vector2( 541, 265 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Grøn_flagermus"]
+position = Vector2( -2.99999, 0.749984 )
+scale = Vector2( 2, 1.75 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grøn_flagermus"]
+position = Vector2( -1.5, -2 )
+shape = SubResource( 11 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Grøn_flagermus"]
+anims/RESET = SubResource( 3 )
+anims/Walk = SubResource( 4 )
+
+[node name="groen_raycast" type="RayCast2D" parent="Grøn_flagermus"]
+position = Vector2( 33, -17 )
+enabled = true
+cast_to = Vector2( 0, 47 )
+collision_mask = 4
+
+[node name="groen_vaeg" type="RayCast2D" parent="Grøn_flagermus"]
+position = Vector2( 24, -3 )
+enabled = true
+cast_to = Vector2( 30, 0 )
+collision_mask = 4
+
+[node name="hurtbox" type="Area2D" parent="Grøn_flagermus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grøn_flagermus/hurtbox"]
+position = Vector2( -0.5, -5.5 )
+shape = SubResource( 13 )
+
+[node name="Area2D" type="Area2D" parent="Grøn_flagermus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grøn_flagermus/Area2D"]
+position = Vector2( -2.5, -3.5 )
+shape = SubResource( 17 )
+
+[node name="Lyserød_kat" type="KinematicBody2D" parent="."]
+position = Vector2( 560, 712 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Lyserød_kat"]
+position = Vector2( 6.5, -6.00002 )
+scale = Vector2( 1.38235, 1.31579 )
+texture = ExtResource( 1 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lyserød_kat"]
+position = Vector2( 4.5, -2.125 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Lyserød_kat"]
+anims/RESET = SubResource( 5 )
+anims/Walk = SubResource( 6 )
+
+[node name="lyseroed_raycast" type="RayCast2D" parent="Lyserød_kat"]
+position = Vector2( 26, -20 )
+enabled = true
+collision_mask = 4
+
+[node name="lyseroed_vaeg" type="RayCast2D" parent="Lyserød_kat"]
+position = Vector2( 6, 0 )
+enabled = true
+cast_to = Vector2( 32, 0 )
+collision_mask = 4
+
+[node name="Area2D" type="Area2D" parent="Lyserød_kat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lyserød_kat/Area2D"]
+position = Vector2( 6, -5 )
+shape = SubResource( 14 )
+
+[node name="Area2D2" type="Area2D" parent="Lyserød_kat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lyserød_kat/Area2D2"]
+position = Vector2( 3.5, -4.5 )
+shape = SubResource( 18 )
+
+[node name="Blå_flagermus" type="KinematicBody2D" parent="."]
+position = Vector2( 131, 478 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Blå_flagermus"]
+position = Vector2( 7.5, -7.49999 )
+scale = Vector2( 1.39474, 1.44118 )
+texture = ExtResource( 3 )
+hframes = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Blå_flagermus"]
+position = Vector2( 5.5, -7.5 )
+shape = SubResource( 12 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Blå_flagermus"]
+anims/RESET = SubResource( 7 )
+anims/Walk = SubResource( 8 )
+
+[node name="blaa_raycast" type="RayCast2D" parent="Blå_flagermus"]
+position = Vector2( 24, -16 )
+enabled = true
+collision_mask = 4
+
+[node name="blaa_vaeg" type="RayCast2D" parent="Blå_flagermus"]
+position = Vector2( 11, -7 )
+enabled = true
+cast_to = Vector2( 37, 0 )
+collision_mask = 4
+
+[node name="Area2D" type="Area2D" parent="Blå_flagermus"]
+position = Vector2( -1, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blå_flagermus/Area2D"]
+position = Vector2( 6, -7 )
+shape = SubResource( 15 )
+
+[node name="Area2D2" type="Area2D" parent="Blå_flagermus"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blå_flagermus/Area2D2"]
+position = Vector2( 6.5, -7 )
+shape = SubResource( 19 )
+
+[node name="gul_kat" type="KinematicBody2D" parent="."]
+position = Vector2( 558, 971 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="gul_kat"]
+position = Vector2( 5, -5.5 )
+scale = Vector2( 1.29412, 1.28947 )
+texture = ExtResource( 4 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gul_kat"]
+position = Vector2( 3.5, -0.25 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="gul_kat"]
+anims/RESET = SubResource( 9 )
+anims/Walk = SubResource( 10 )
+
+[node name="gul_raycast" type="RayCast2D" parent="gul_kat"]
+position = Vector2( 30, -20 )
+enabled = true
+collision_mask = 4
+
+[node name="gul_vaeg" type="RayCast2D" parent="gul_kat"]
+position = Vector2( 14, -1 )
+enabled = true
+cast_to = Vector2( 36, 0 )
+collision_mask = 4
+
+[node name="Area2D" type="Area2D" parent="gul_kat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gul_kat/Area2D"]
+position = Vector2( 4.5, -6 )
+shape = SubResource( 16 )
+
+[node name="Area2D2" type="Area2D" parent="gul_kat"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gul_kat/Area2D2"]
+position = Vector2( 4.5, -3 )
+shape = SubResource( 20 )
+
+[connection signal="area_entered" from="Grøn_flagermus/hurtbox" to="Grøn_flagermus" method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="Grøn_flagermus/Area2D" to="Grøn_flagermus" method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Lyserød_kat/Area2D" to="Lyserød_kat" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Lyserød_kat/Area2D2" to="Lyserød_kat" method="_on_Area2D2_body_entered"]
+[connection signal="area_entered" from="Blå_flagermus/Area2D" to="Blå_flagermus" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Blå_flagermus/Area2D2" to="Blå_flagermus" method="_on_Area2D2_body_entered"]
+[connection signal="area_entered" from="gul_kat/Area2D" to="gul_kat" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="gul_kat/Area2D2" to="gul_kat" method="_on_Area2D2_body_entered"]

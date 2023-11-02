@@ -1,0 +1,265 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/slime_grøn.gd" type="Script" id=1]
+[ext_resource path="res://Grafik/Enemy/Slime_Grøn.png" type="Texture" id=2]
+[ext_resource path="res://Grafik/Enemy/Slime_Blå.png" type="Texture" id=3]
+[ext_resource path="res://Grafik/Enemy/Slime_Orange.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/slime_orange.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/slime_blå.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24, 14.5 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Walk"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 47.25, 27.25 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 28.5, 16 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 27, 16.5 )
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Walk"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Walk"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "walk"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[node name="Enemies1" type="Node2D"]
+
+[node name="slime_grøn" type="KinematicBody2D" parent="."]
+position = Vector2( 359, 215 )
+collision_layer = 2
+collision_mask = 5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="slime_grøn"]
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_grøn"]
+position = Vector2( 3, 2 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_grøn"]
+anims/RESET = SubResource( 2 )
+anims/Walk = SubResource( 3 )
+
+[node name="Slime_raycast" type="RayCast2D" parent="slime_grøn"]
+position = Vector2( 45, -24 )
+enabled = true
+cast_to = Vector2( 0, 62 )
+collision_mask = 4
+collide_with_areas = true
+
+[node name="hurtbox" type="Area2D" parent="slime_grøn"]
+
+[node name="Collsion" type="CollisionShape2D" parent="slime_grøn/hurtbox"]
+position = Vector2( 3, -4 )
+shape = SubResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="slime_grøn"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_grøn/Area2D"]
+position = Vector2( 1.5, 0 )
+shape = SubResource( 11 )
+
+[node name="slime_blå" type="KinematicBody2D" parent="."]
+position = Vector2( 183, 708 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="slime_blå"]
+texture = ExtResource( 3 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_blå"]
+position = Vector2( 1, -0.5 )
+shape = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_blå"]
+anims/RESET = SubResource( 5 )
+anims/Walk = SubResource( 6 )
+
+[node name="Blaaslime_raycast" type="RayCast2D" parent="slime_blå"]
+position = Vector2( 44, -22 )
+enabled = true
+collision_mask = 4
+
+[node name="Blaaslime_raycast_vaeg" type="RayCast2D" parent="slime_blå"]
+position = Vector2( 36, 0 )
+enabled = true
+cast_to = Vector2( 30, 0 )
+collision_mask = 4
+
+[node name="hurtbox" type="Area2D" parent="slime_blå"]
+
+[node name="Collision" type="CollisionShape2D" parent="slime_blå/hurtbox"]
+position = Vector2( 3, -14.5 )
+shape = SubResource( 10 )
+
+[node name="Area2D" type="Area2D" parent="slime_blå"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="slime_blå/Area2D"]
+polygon = PoolVector2Array( -21, -4, -15, -13, -7, -19, 13, -19, 20, -16, 30, -7, 33, 6, 31, 17, -20, 13, -21, 10, -18, 5 )
+
+[node name="slime_orange" type="KinematicBody2D" parent="."]
+position = Vector2( 556, 16 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="slime_orange"]
+texture = ExtResource( 4 )
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_orange"]
+position = Vector2( 1, -0.5 )
+shape = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_orange"]
+anims/RESET = SubResource( 7 )
+anims/Walk = SubResource( 8 )
+anims/walk = SubResource( 9 )
+
+[node name="Orangeslime_raycast" type="RayCast2D" parent="slime_orange"]
+position = Vector2( 41, -22 )
+enabled = true
+collision_mask = 4
+
+[node name="Orangeslime_raycast_vaeg" type="RayCast2D" parent="slime_orange"]
+position = Vector2( 32, 0 )
+enabled = true
+collision_mask = 4
+
+[node name="hurtbox" type="Area2D" parent="slime_orange"]
+
+[node name="Collision" type="CollisionShape2D" parent="slime_orange/hurtbox"]
+position = Vector2( 8.25, -6.75 )
+shape = SubResource( 10 )
+one_way_collision_margin = 0.0
+
+[node name="Area2D" type="Area2D" parent="slime_orange"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="slime_orange/Area2D"]
+polygon = PoolVector2Array( -19, 15, -19, 6, -21, 4, -22, -4, -12, -15, 0, -18, 9, -18, 15, -17, 27, -8, 32, -2, 32, 15, 17, 12, -11, 15 )
+
+[connection signal="area_entered" from="slime_grøn/hurtbox" to="slime_grøn" method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="slime_grøn/Area2D" to="slime_grøn" method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="slime_blå/hurtbox" to="slime_blå" method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="slime_blå/Area2D" to="slime_blå" method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="slime_orange/hurtbox" to="slime_orange" method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="slime_orange/Area2D" to="slime_orange" method="_on_Area2D_body_entered"]

@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.392157, 0.392157, 0.392157, 0.686275 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.392157, 0.392157, 0.392157, 0.784314 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.392157, 0.392157, 0.392157, 0.588235 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PauseMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.145098, 0.145098, 0.145098, 0.470588 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 295.0
+margin_top = 146.0
+margin_right = 729.0
+margin_bottom = 453.0
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 434.0
+margin_bottom = 83.0
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+text = "Game Paused"
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 103.0
+margin_right = 434.0
+margin_bottom = 103.0
+
+[node name="ResumeGameButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 123.0
+margin_right = 434.0
+margin_bottom = 171.0
+focus_mode = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Resume Game"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 191.0
+margin_right = 434.0
+margin_bottom = 239.0
+focus_mode = 0
+custom_constants/hseparation = 20
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Settings"
+
+[node name="ExitGameButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 259.0
+margin_right = 434.0
+margin_bottom = 307.0
+focus_mode = 0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Exit Game"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ResumeGameButton" to="." method="_on_ResumeGameButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
